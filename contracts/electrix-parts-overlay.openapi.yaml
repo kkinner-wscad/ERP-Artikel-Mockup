@@ -2,10 +2,22 @@ openapi: 3.0.1
 info:
   title: ELECTRIX Parts API - ERP Integration Overlay
   version: 0.1.0-poc
-  description: Geplante Ergänzungen zur vorhandenen WSCAD API. Nicht implementierte Operationen werden im ERP-Mockup simuliert.
+  description: Geplante Ergänzungen zur vorhandenen WSCAD API für unmittelbare ERP-Aktionen ohne Zwischendatenbank und ohne Synchronisationslauf.
 servers:
   - url: http://localhost:10384
 paths:
+  /api/v1/parts:
+    post:
+      summary: Neuen Artikel unmittelbar anlegen
+      description: Die gesamte Operation läuft in einer Datenbanktransaktion. Eine bereits vorhandene Artikelnummer wird nicht überschrieben.
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/PartWriteRequest' } } }
+      responses:
+        '201': { description: Artikel angelegt, content: { application/json: { schema: { $ref: '#/components/schemas/PartWriteResult' } } } }
+        '401': { description: Anmeldung fehlt oder ist ungültig, content: { application/json: { schema: { $ref: '#/components/schemas/ApiError' } } } }
+        '409': { description: Artikelnummer bereits vorhanden, content: { application/json: { schema: { $ref: '#/components/schemas/ApiError' } } } }
+        '422': { description: Fachliche Validierung fehlgeschlagen, content: { application/json: { schema: { $ref: '#/components/schemas/ApiError' } } } }
   /api/v1/parts/{partId}:
     get:
       summary: Vollständigen Artikel lesen
@@ -28,6 +40,9 @@ paths:
         content: { application/json: { schema: { $ref: '#/components/schemas/PartWriteRequest' } } }
       responses:
         '200': { description: Änderungsergebnis, content: { application/json: { schema: { $ref: '#/components/schemas/PartWriteResult' } } } }
+        '404': { description: Artikel nicht gefunden, content: { application/json: { schema: { $ref: '#/components/schemas/ApiError' } } } }
+        '409': { description: Versions- oder Business-Key-Konflikt, content: { application/json: { schema: { $ref: '#/components/schemas/ApiError' } } } }
+        '422': { description: Fachliche Validierung fehlgeschlagen, content: { application/json: { schema: { $ref: '#/components/schemas/ApiError' } } } }
   /api/v1/parts/validate:
     post:
       summary: Artikel prüfen, ohne zu speichern
@@ -132,3 +147,11 @@ components:
         partId: { type: integer, format: int64 }
         partNumber: { type: string }
         version: { type: string }
+    ApiError:
+      type: object
+      required: [code, message]
+      properties:
+        code: { type: string, example: PART_ALREADY_EXISTS }
+        message: { type: string, example: Artikelnummer 2904602 ist bereits vorhanden. }
+        correlationId: { type: string }
+        details: { type: object, additionalProperties: true }

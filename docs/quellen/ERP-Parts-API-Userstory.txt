@@ -1,0 +1,103 @@
+Main Idea
+There is a need for external Tools (ERP, PLM etc,) get the possibility to adjust our Article Database (create, change, update, delete parts)
+
+What was the solution before API (ERPsynctool)
+Actually, everybody is allowed to change our Article Database directly because it´s not encrypted. But in fact, it´s dangerous and not that easy because of the relations between tables and the attributes. For this, we created a mapping/syncronizing Tool. The external tool writes to a single intermediate database with only one table and our ERPsynctool reads from there and enters all information into our Article database. Our ERPsynctool naturally knows the mapping and all relationships in our database. Maybe we can build on that.
+
+The WSCAD API shall be extended to provide structured access to the WSCAD article database. The API shall interact directly with the configured SQLite or SQL Server article database. No intermediate database, exchange database, or Synctool-specific data storage shall be required.
+
+The existing /api/v1/parts endpoints shall be used as the central API for article operations. A separate or parallel article database API shall not be introduced.
+
+The following existing endpoints shall be reused and extended where required:
+
+    GET /api/v1/parts for retrieving and filtering articles
+
+    GET /api/v1/parts/search for article searches
+
+    GET /api/v1/parts/usage for checking article usage
+
+    PUT /api/v1/parts/load-in-cursor for transferring an article to ELECTRIX
+
+    GET /api/v1/tasks/{id} for asynchronous operation status
+
+    GET /api/v1/symbols and GET /api/v1/symbols/search for symbol selection
+
+    GET /api/v1/projects and GET /api/v1/projects/{id} for selecting projects and replacement scopes
+
+    POST /api/v1/universe/import-part for Universe imports
+
+The Universe import endpoint shall use the same internal article service as all other article operations.
+
+The Parts API shall be extended to support:
+
+    Retrieving a complete article
+
+    Creating a new article
+
+    Updating selected article sections
+
+    Validating article data without saving it
+
+    Creating or updating an article through an upsert operation
+
+    Validating and importing multiple articles
+
+    Retrieving the results of batch operations
+
+    Retrieving articles changed since a specified synchronization cursor
+
+    Approving imported or modified articles
+
+    Updating the article lifecycle status
+
+    Assigning and removing substitute articles
+
+    Previewing and executing article replacements
+
+Additional endpoints shall be provided for managing business partners such as manufacturers and suppliers, managing article outlines, and retrieving the current article database status.
+
+The public API model shall use stable and understandable properties such as partNumber, manufacturer, supplier, classification, descriptions, commercial, technical, representations, lifecycle, and substitutePart.
+
+Physical database fields and internal identifiers such as artManufacturer or adrAutoValue shall not be exposed as writable API properties.
+
+The API implementation shall resolve and maintain all required database relations. For example, when an article containing a manufacturer is created, the API shall:
+
+    Search for the manufacturer in the adress table.
+
+    Create or update the manufacturer if necessary.
+
+    Retrieve the corresponding adrAutoValue.
+
+    Store this value in article.artManufacturer.
+
+    Write all related article information to the required dependent tables.
+
+Related data shall be stored in the appropriate existing tables, including:
+
+    articleAttribute for article attributes
+
+    articleBibSymb for symbol assignments
+
+    article3D for 3D models
+
+    articleBauform for outlines
+
+    articleCabinet for cabinet information
+
+    articleBA for building automation data
+
+    articleCombi for component relationships
+
+    articleLexicon for multilingual texts
+
+    CommunicationProfile for communication profiles
+
+    VersionInfo for database version information
+
+All changes belonging to one article operation shall be executed within a single database transaction. If one part of the operation fails, the complete operation shall be rolled back.
+
+The implementation shall support SQLite and SQL Server using the same public API contract. Database-specific SQL, locking, transaction handling, and key generation shall remain inside the respective persistence provider.
+
+Articles shall not be physically deleted through the API. Articles that are no longer available shall be handled through their lifecycle status. This preserves existing project references, article usage information, and synchronization history.
+
+The API shall support bidirectional integration with ERP, PIM, PLM, and other external systems. A change-feed endpoint shall allow clients to retrieve changed articles using a client-managed cursor without requiring an additional synchronization database.

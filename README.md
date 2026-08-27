@@ -1,20 +1,20 @@
-# ERP-Artikel-Mockup
+# ERP Control – ELECTRIX API POC/MVP
 
-Eigenständige Testoberfläche für die Integration eines führenden ERP-Systems mit der WSCAD ELECTRIX API.
+Eigenständige, lokal laufende Oberfläche für die direkte Integration eines führenden ERP-Systems mit der WSCAD ELECTRIX API. Es gibt keinen Synchronisationslauf und keine Zwischendatenbank: Eine ERP-Aktion erzeugt unmittelbar einen API-Aufruf und erhält unmittelbar die ELECTRIX-Antwort.
 
 ## Funktionsumfang
 
-- Artikel suchen, filtern und im Mock-Modus bearbeiten
-- Validate- und Upsert-Abläufe für einzelne Artikel simulieren
-- Bulk-Upsert inklusive Task-Fortschritt und Einzelresultaten testen
+- Artikel über die bestehende Parts API suchen und filtern
+- Artikelnummer prüfen sowie Artikel direkt anlegen oder ändern
+- Konfliktfall `409 PART_ALREADY_EXISTS` reproduzierbar testen
+- echte ELECTRIX-Projekte laden und öffnen
 - vorhandenen Materiallisten-Report als Ausgangspunkt für einen ERP-Stücklistenworkflow verwenden
-- vorhandene Endpoints im Live-Modus gegen eine lokale ELECTRIX-Instanz aufrufen
-- geplante Parts-Endpoints anhand des Overlay-Vertrags simulieren
-- Mock- und Live-Modus klar voneinander trennen
+- alle 95 vorhandenen OpenAPI-Operationen in der API-Konsole auswählen und lokal ausführen
+- geplante Parts-Endpoints anhand des Overlay-Vertrags im Demo- oder Live-Modus aufrufen
 
 ## Start
 
-`ERP-Artikel-Mockup-starten.cmd` doppelklicken oder im Projektordner `pnpm dev` ausführen. Anschließend `http://localhost:3000` öffnen. Ist Port 3000 belegt, zeigt die Konsole den verwendeten Ersatzport an.
+`ERP-Artikel-Mockup-starten.cmd` doppelklicken. Anschließend öffnet sich `http://localhost:3010`. Es ist keine ChatGPT-Anmeldung erforderlich.
 
 ## Sicherheit
 
@@ -24,6 +24,8 @@ Die lokale Proxy-Route akzeptiert ausschließlich `localhost`, `127.0.0.1` oder 
 
 - `contracts/wscad-existing.openapi.json`: vorhandene WSCAD-OpenAPI
 - `contracts/electrix-parts-overlay.openapi.yaml`: für das ERP-Szenario geplante Endpoints
+- `docs/quellen/ERP-Parts-API-Userstory.txt`: bereitgestellte API-User-Story
+- `docs/Direkte-Artikelaufrufe.md`: Direktaufrufe, Statuscodes und MVP-Abgrenzung
 - `docs/quellen/WSCAD-Artikel-API-Direkte-Datenbankintegration.md`: fachliche Ausgangsanforderung
 - `docs/Materiallisten-Workflow.md`: Stücklistenübergabe und offene API-Frage
 
