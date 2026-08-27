@@ -1,0 +1,5070 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WSCAD API Server",
+    "description": "WSCAD API Server",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/aggregateobjects": {
+      "get": {
+        "tags": [
+          "AggregateObjects"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "AggregateObjects"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AggregateObjectDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/aggregateobjects/{id}": {
+      "get": {
+        "tags": [
+          "AggregateObjects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "AggregateObjects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AggregateObjectDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "AggregateObjects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/aggregateobjects/addall": {
+      "post": {
+        "tags": [
+          "AggregateObjects"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AggregateObjectDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/aggregates": {
+      "get": {
+        "tags": [
+          "Aggregates"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Aggregates"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AggregateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/aggregates/{id}": {
+      "get": {
+        "tags": [
+          "Aggregates"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Aggregates"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AggregateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Aggregates"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/aggregates/addall": {
+      "post": {
+        "tags": [
+          "Aggregates"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AggregateDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/badatamodels": {
+      "get": {
+        "tags": [
+          "BaDataModels"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "BaDataModels"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaDataModelDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/badatamodels/{id}": {
+      "get": {
+        "tags": [
+          "BaDataModels"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "BaDataModels"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaDataModelDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "BaDataModels"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/badatamodels/addall": {
+      "post": {
+        "tags": [
+          "BaDataModels"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BaDataModelDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/baexport/done": {
+      "post": {
+        "tags": [
+          "BaExports"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/generation/cabinet/generate": {
+      "post": {
+        "tags": [
+          "CabinetGeneration"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/generation/cabinet/fill": {
+      "post": {
+        "tags": [
+          "CabinetGeneration"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/generation/cabinet/fillbyparts": {
+      "post": {
+        "tags": [
+          "CabinetGeneration"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AspectsAndPartsModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/comments": {
+      "get": {
+        "tags": [
+          "Comments"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommentResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Comments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommentCreateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/comments/{id}": {
+      "get": {
+        "tags": [
+          "Comments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommentResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Comments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Comments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/comments/add-many": {
+      "post": {
+        "tags": [
+          "Comments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CommentCreateRequest"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/comments/update-many": {
+      "put": {
+        "tags": [
+          "Comments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CommentRequest"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/comments/delete-many": {
+      "delete": {
+        "tags": [
+          "Comments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/connection-attribute/load-in-cursor": {
+      "put": {
+        "tags": [
+          "ConnectionAttributes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConnectionAttribute"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/databasemigrations": {
+      "post": {
+        "tags": [
+          "DatabaseMigration"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DatabaseMigrationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DatabaseMigrationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/macros/find-in-active-technology": {
+      "get": {
+        "tags": [
+          "Macros"
+        ],
+        "parameters": [
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MacroPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/macros/load-in-cursor": {
+      "put": {
+        "tags": [
+          "Macros"
+        ],
+        "parameters": [
+          {
+            "name": "macroname",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/macros": {
+      "get": {
+        "tags": [
+          "Macros"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/MacroType"
+            }
+          },
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MacroPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/macros/search": {
+      "get": {
+        "tags": [
+          "Macros"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "technology",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Technology"
+            }
+          },
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MacroSearchResultDtoPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/macros/place-on-page": {
+      "put": {
+        "tags": [
+          "Macros"
+        ],
+        "parameters": [
+          {
+            "name": "macroname",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/macros/place-multiple-on-page": {
+      "put": {
+        "tags": [
+          "Macros"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlacePathMacrosOnPageRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/macros/refresh-macros-list": {
+      "post": {
+        "tags": [
+          "Macros"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/norms": {
+      "get": {
+        "tags": [
+          "Norms"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "technology",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Technology"
+            }
+          },
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NormSearchResultDtoPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/objects": {
+      "get": {
+        "tags": [
+          "Objects"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Objects"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObjectDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/objects/{id}": {
+      "get": {
+        "tags": [
+          "Objects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Objects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObjectDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Objects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/objects/addall": {
+      "post": {
+        "tags": [
+          "Objects"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ObjectDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/own-knowledge-documents": {
+      "get": {
+        "tags": [
+          "OwnKnowledgeDocuments"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "documentname",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "similaritythreshold",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnKnowledgeResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{projectid}/pages/tree": {
+      "get": {
+        "tags": [
+          "Pages"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectTreeStructure"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{projectid}/pages/{pageid}/properties": {
+      "get": {
+        "tags": [
+          "Pages"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "pageid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PageProperties"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{projectid}/pages/{pageid}/open": {
+      "post": {
+        "tags": [
+          "Pages"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "pageid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/pages/create": {
+      "post": {
+        "tags": [
+          "Pages"
+        ],
+        "parameters": [
+          {
+            "name": "numberofpages",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "startingpagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "aspect",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "technology",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Technology"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/parts/load-in-cursor": {
+      "put": {
+        "tags": [
+          "Parts"
+        ],
+        "parameters": [
+          {
+            "name": "partnumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/parts": {
+      "get": {
+        "tags": [
+          "Parts"
+        ],
+        "parameters": [
+          {
+            "name": "partnumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "manufacturer",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/parts/search": {
+      "get": {
+        "tags": [
+          "Parts"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "technology",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Technology"
+            }
+          },
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartSearchResultDtoPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/parts/usage": {
+      "get": {
+        "tags": [
+          "Parts"
+        ],
+        "parameters": [
+          {
+            "name": "partnumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartUsageInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects": {
+      "get": {
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/list": {
+      "get": {
+        "tags": [
+          "Projects"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/active": {
+      "get": {
+        "tags": [
+          "Projects"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Project"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{id}": {
+      "get": {
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Project"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/create": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Project"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Project"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Project"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Project"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/create-by-name": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "name": "projectname",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{id}/open": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/close": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{id}/checkin": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/checkin": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/checkinall": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{id}/backup": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{id}/restore": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/import": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "name": "filepath",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{id}/print": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects/active/validate": {
+      "post": {
+        "tags": [
+          "ProjectValidation"
+        ],
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/ProjectValidationFilter"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ProjectValidationType"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/reports/general-report/generate-with-defaults": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "parameters": [
+          {
+            "name": "reporttype",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/GeneralReportType"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/reports/label-report/generate-with-defaults": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "parameters": [
+          {
+            "name": "reporttype",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/LabelReportType"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/reports/general-report/open-configuration-wizard": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "parameters": [
+          {
+            "name": "reporttype",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/GeneralReportType"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/reports/label-report/open-configuration-wizard": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "parameters": [
+          {
+            "name": "reporttype",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/LabelReportType"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/reports/generate-material-list-excel-report": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MaterialListExcelReportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/representations/go-to": {
+      "post": {
+        "tags": [
+          "Representations"
+        ],
+        "parameters": [
+          {
+            "name": "referencedesignation",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagetechnology",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Technology"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/standards": {
+      "get": {
+        "tags": [
+          "Standards"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Standards"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StandardDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/standards/{id}": {
+      "get": {
+        "tags": [
+          "Standards"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Standards"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StandardDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Standards"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/standards/addall": {
+      "post": {
+        "tags": [
+          "Standards"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/StandardDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/symbols/load-in-cursor": {
+      "put": {
+        "tags": [
+          "Symbols"
+        ],
+        "parameters": [
+          {
+            "name": "symbolname",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/symbols": {
+      "get": {
+        "tags": [
+          "Symbols"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/symbols/search": {
+      "get": {
+        "tags": [
+          "Symbols"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "technology",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/Technology"
+            }
+          },
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolSearchResultDtoPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/tasks/{id}": {
+      "get": {
+        "tags": [
+          "Tasks"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/templates/projects": {
+      "get": {
+        "tags": [
+          "Templates"
+        ],
+        "parameters": [
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/templates/projects/{templatename}/properties": {
+      "get": {
+        "tags": [
+          "Templates"
+        ],
+        "parameters": [
+          {
+            "name": "templatename",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectTemplateProperties"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/templates/projects/framelayouts": {
+      "get": {
+        "tags": [
+          "Templates"
+        ],
+        "parameters": [
+          {
+            "name": "pagenumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pagesize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringPagedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/templates/projects/framelayouts/{layoutname}": {
+      "get": {
+        "tags": [
+          "Templates"
+        ],
+        "parameters": [
+          {
+            "name": "layoutname",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectFrameLayout"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/universe": {
+      "get": {
+        "tags": [
+          "Universe"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "options": {
+        "tags": [
+          "Universe"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/universe/importwspackbypath": {
+      "post": {
+        "tags": [
+          "Universe"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "downloadPath": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "downloadPath": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "options": {
+        "tags": [
+          "Universe"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "downloadPath": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "downloadPath": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/universe/importwspackstream": {
+      "post": {
+        "tags": [
+          "Universe"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "options": {
+        "tags": [
+          "Universe"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/universe/import-part": {
+      "post": {
+        "tags": [
+          "Universe"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ImportPartRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AggregateDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "ID of the aggregate in the form of a GUID",
+            "nullable": true
+          },
+          "Name": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the localized names of the aggregate.",
+            "nullable": true
+          },
+          "Description": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the localized descriptions of the aggregate.",
+            "nullable": true
+          },
+          "Selection": {
+            "type": "string",
+            "description": "Gets or sets the selection criteria of the aggregate.",
+            "nullable": true
+          },
+          "Properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PropertyDto"
+            },
+            "description": "Gets or sets the properties of the aggregate.",
+            "nullable": true
+          },
+          "AggregateObjects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AggregateObjectDto"
+            },
+            "description": "Gets or sets the aggregate objects associated with the aggregate.",
+            "nullable": true
+          },
+          "BaDataModelId": {
+            "type": "string",
+            "description": "Gets or sets the ID of the aggregate model associated with the aggregate.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a data transfer object for the Aggregate entity."
+      },
+      "AggregateObjectDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "ID of the aggregate object.",
+            "nullable": true
+          },
+          "AggregateId": {
+            "type": "string",
+            "description": "Gets or sets the ID of the aggregate associated with the aggregate object.",
+            "nullable": true
+          },
+          "Properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PropertyDto"
+            },
+            "description": "Gets or sets the list of key-value properties.",
+            "nullable": true
+          },
+          "ObjectId": {
+            "type": "string",
+            "description": "Gets or sets the ID of the referenced object.",
+            "nullable": true
+          },
+          "Object": {
+            "$ref": "#/components/schemas/ObjectDto"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Data Transfer Object for AggregateObject.",
+        "x-refDescriptions": {
+          "Object": "Gets or sets the referenced object."
+        }
+      },
+      "AspectsAndPartsModel": {
+        "type": "object",
+        "properties": {
+          "Aspects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "Parts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaDataModelDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "Gets or sets the ID of the aggregate model.",
+            "nullable": true
+          },
+          "Name": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the localized names of the aggregate model.",
+            "nullable": true
+          },
+          "Description": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the localized descriptions of the aggregate model.",
+            "nullable": true
+          },
+          "PropertyGroups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PropertyGroupDto"
+            },
+            "description": "Gets or sets the property groups of the aggregate model.",
+            "nullable": true
+          },
+          "Properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BaDataModelPropertyDto"
+            },
+            "description": "Gets or sets the properties of the aggregate model.",
+            "nullable": true
+          },
+          "StandardId": {
+            "type": "string",
+            "description": "Gets or sets id of the standard.",
+            "nullable": true
+          },
+          "Standard": {
+            "$ref": "#/components/schemas/StandardDto"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a data transfer object for the BaDataModel entity.",
+        "x-refDescriptions": {
+          "Standard": "Gets or sets the standard associated with the aggregate model."
+        }
+      },
+      "BaDataModelPropertyDto": {
+        "type": "object",
+        "properties": {
+          "Key": {
+            "type": "string",
+            "description": "Gets or sets the key of the aggregate model property.",
+            "nullable": true
+          },
+          "Name": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the localized names of the aggregate model property.",
+            "nullable": true
+          },
+          "Description": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the localized descriptions of the aggregate model property.",
+            "nullable": true
+          },
+          "DataType": {
+            "type": "string",
+            "description": "Gets or sets the data type of the aggregate model property.",
+            "nullable": true
+          },
+          "AppliesTo": {
+            "type": "string",
+            "description": "Gets or sets the entities to which the aggregate model property applies.",
+            "nullable": true
+          },
+          "IsRequired": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the aggregate model property is required."
+          },
+          "BelongsTo": {
+            "type": "string",
+            "description": "Gets or sets the entity to which the aggregate model property belongs.",
+            "nullable": true
+          },
+          "MapsTo": {
+            "type": "string",
+            "description": "Gets or sets the mapping of the aggregate model property.",
+            "nullable": true
+          },
+          "MapsToBaDpManager": {
+            "type": "string",
+            "description": "Gets or sets the legacy mapping of the aggregate model property.",
+            "nullable": true
+          },
+          "IsEditable": {
+            "type": "boolean",
+            "description": "Gets or sets the information if the property is editable."
+          },
+          "IsHiddenForPlaceholder": {
+            "type": "boolean",
+            "description": "Gets or sets the information if the property is hidden"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a data transfer object for the BaDataModelProperty entity."
+      },
+      "CommentCreateRequest": {
+        "type": "object",
+        "properties": {
+          "Title": {
+            "type": "string",
+            "description": "The title of the comment.",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "description": "The description or content of the comment.",
+            "nullable": true
+          },
+          "Status": {
+            "$ref": "#/components/schemas/CommentStatus"
+          },
+          "UserName": {
+            "type": "string",
+            "description": "The username of the person who created the comment.",
+            "nullable": true
+          },
+          "Priority": {
+            "type": "integer",
+            "description": "The priority level of the comment.",
+            "format": "int32"
+          },
+          "IsVisible": {
+            "type": "boolean",
+            "description": "Indicates whether this comment should be visible."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a request for creating a comment.",
+        "x-refDescriptions": {
+          "Status": "The status of the comment."
+        }
+      },
+      "CommentRequest": {
+        "type": "object",
+        "properties": {
+          "Title": {
+            "type": "string",
+            "description": "The title of the comment.",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "description": "The description or content of the comment.",
+            "nullable": true
+          },
+          "Status": {
+            "$ref": "#/components/schemas/CommentStatus"
+          },
+          "UserName": {
+            "type": "string",
+            "description": "The username of the person who created the comment.",
+            "nullable": true
+          },
+          "Priority": {
+            "type": "integer",
+            "description": "The priority level of the comment.",
+            "format": "int32"
+          },
+          "IsVisible": {
+            "type": "boolean",
+            "description": "Indicates whether this comment should be visible."
+          },
+          "Id": {
+            "type": "integer",
+            "description": "The identifier of the comment.",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a request for updating a comment.",
+        "x-refDescriptions": {
+          "Status": "The status of the comment."
+        }
+      },
+      "CommentResponse": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "integer",
+            "description": "The identifier of the comment.",
+            "format": "int32"
+          },
+          "Title": {
+            "type": "string",
+            "description": "The title of the comment.",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "description": "The description or content of the comment.",
+            "nullable": true
+          },
+          "Status": {
+            "$ref": "#/components/schemas/CommentStatus"
+          },
+          "UserName": {
+            "type": "string",
+            "description": "The username of the person who created the comment.",
+            "nullable": true
+          },
+          "DateTime": {
+            "type": "string",
+            "description": "The date and time when the comment was created or updated.",
+            "format": "date-time"
+          },
+          "Priority": {
+            "type": "integer",
+            "description": "The priority level of the comment.",
+            "format": "int32"
+          },
+          "IsVisible": {
+            "type": "boolean",
+            "description": "Indicates whether this comment should be visible."
+          },
+          "RepresentationId": {
+            "type": "integer",
+            "description": "The identifier of the representation associated with this comment, if any.",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a comment returned by the API.",
+        "x-refDescriptions": {
+          "Status": "The status of the comment."
+        }
+      },
+      "CommentStatus": {
+        "enum": [
+          "Check",
+          "InProgress",
+          "Done"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "ConnectionAttribute": {
+        "type": "object",
+        "properties": {
+          "Potential": {
+            "type": "string",
+            "description": "Potential of the connection.",
+            "nullable": true
+          },
+          "PartNummber": {
+            "type": "string",
+            "description": "Article of the connection.",
+            "nullable": true
+          },
+          "ColorCode": {
+            "type": "string",
+            "description": "Color code of the connection.",
+            "nullable": true
+          },
+          "CrossSection": {
+            "type": "string",
+            "description": "Cross section of the connection.",
+            "nullable": true
+          },
+          "WireType": {
+            "type": "string",
+            "description": "Wire type of the connection.",
+            "nullable": true
+          },
+          "WireDesignation": {
+            "type": "string",
+            "description": "Wire designation of the connection.",
+            "nullable": true
+          },
+          "RoutingTag": {
+            "type": "string",
+            "description": "Routing tag of the connection.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a connection attribute that can be placed in a drawing."
+      },
+      "Customer": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name of the customer.",
+            "nullable": true
+          },
+          "Number": {
+            "type": "string",
+            "description": "The unique number identifying the customer.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a customer in the WSCAD system."
+      },
+      "DatabaseMigrationRequest": {
+        "type": "object",
+        "properties": {
+          "SourceFilePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "TargetFilePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "RemoveOldDatabase": {
+            "type": "boolean"
+          },
+          "MigrationType": {
+            "$ref": "#/components/schemas/DbMigrationType"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DatabaseMigrationResponse": {
+        "type": "object",
+        "properties": {
+          "ExitCode": {
+            "$ref": "#/components/schemas/ExitCode"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DbMigrationType": {
+        "enum": [
+          "AccessToSqlite",
+          "SqliteToAccess",
+          "AccessToSqliteCenter",
+          "SqliteToAccessCenter",
+          "SqliteToAccessProject",
+          "SqliteToAccessArticle",
+          "AccessToSqliteProjectData",
+          "SqliteToAccessMacroSet",
+          "AccessToSqliteArticle"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "Directory": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "integer",
+            "description": "Unique identifier for the directory.",
+            "format": "int32"
+          },
+          "ParentId": {
+            "type": "integer",
+            "description": "Identifier of the parent directory (0 when is root)",
+            "format": "int32"
+          },
+          "DirectoryType": {
+            "$ref": "#/components/schemas/SolutionFolder"
+          },
+          "Text": {
+            "type": "string",
+            "description": "Name or label of the directory.",
+            "nullable": true
+          },
+          "HasFiles": {
+            "type": "boolean",
+            "description": "Value indicating whether the directory contains any files in its root."
+          },
+          "HasFilesInSubdirectories": {
+            "type": "boolean",
+            "description": "value indicating whether the directory or any of its subdirectories contains files.",
+            "readOnly": true
+          },
+          "IsRoot": {
+            "type": "boolean",
+            "description": "Value indicating whether the directory is a root directory."
+          },
+          "SolutionItem": {
+            "$ref": "#/components/schemas/SolutionItem"
+          },
+          "Visible": {
+            "type": "boolean",
+            "description": "Value indicating whether the directory is visible in the tree"
+          },
+          "Directories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Directory"
+            },
+            "description": "Collection of subdirectories within this directory.",
+            "nullable": true
+          },
+          "PageFiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PageFile"
+            },
+            "description": "Collection of files within this directory.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a directory that can contain subdirectories and files.",
+        "x-refDescriptions": {
+          "DirectoryType": "Type of the directory as a  enum.",
+          "SolutionItem": "associated with the directory."
+        }
+      },
+      "ExitCode": {
+        "enum": [
+          "Success",
+          "UnknownError",
+          "FileNotFound",
+          "AppNotResponsive"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "FileType": {
+        "enum": [
+          "None",
+          "ListOfProjects",
+          "Project",
+          "File",
+          "CoverSheetDrawing",
+          "Revision",
+          "Summary",
+          "ElectricalDrawing",
+          "PanelLayoutDrawing",
+          "CabinetDrawing",
+          "FluidDrawing",
+          "TerminalChart",
+          "PlugChart",
+          "CableList",
+          "CableChart",
+          "ConnectionsList",
+          "MaterialList",
+          "ReferenceList",
+          "GraphicDrawing",
+          "FrameDrawing",
+          "ElectricalMacro",
+          "ArchitecturalDrawing",
+          "ArchitecturalDrawing2D",
+          "ControlDiagram",
+          "External",
+          "FileWithConfigurationParameters",
+          "FileWithStateParameters",
+          "ConfigurationArchiveFile",
+          "MLTImportElectroCADProject",
+          "WSCADImportElectroCADProject",
+          "GraphicalTerminalDiagram",
+          "PLCChart",
+          "SymbolLibrary",
+          "SchematicOverviewDrawing",
+          "ProjectArchiveFile",
+          "WSCADErrorInfoFile",
+          "MacroVariantList",
+          "ProjectWizardPlaceholderDefinition",
+          "Legend",
+          "ProjektWizardSet",
+          "ProjektWizardSetLegacy",
+          "ProjectPattern",
+          "FramePattern",
+          "Label",
+          "LayoutArchive",
+          "HoseList",
+          "CabinetMacro",
+          "FluidMacro",
+          "ControlDiagramMacro",
+          "ArchitecturalMacro",
+          "DistributorWizardSet",
+          "WizardProjectDistributor",
+          "InfoboxForm",
+          "ImportElectroCADLib",
+          "FunctionListBA",
+          "ImportElectroCADMaterialDB",
+          "ReferenceChart",
+          "SchematicOverviewDrawingMacro",
+          "AssignmentBetweenWSCADFieldsAndDBFields",
+          "DistributionPlan",
+          "ParameterList",
+          "PIDiagram",
+          "PIDiagramMacro",
+          "PIDiagramMeasurePointList",
+          "TranslationForDirectory",
+          "PipeList",
+          "ProjectArchiveFileAfter2025",
+          "DataPackage",
+          "StructureList"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "FlPropertyDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "Gets or sets the guid of the property.",
+            "nullable": true
+          },
+          "Type": {
+            "type": "string",
+            "description": "Gets or sets the type of the property.",
+            "nullable": true
+          },
+          "GeneralName": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the general names in different languages.",
+            "nullable": true
+          },
+          "StandardName": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the standard names in different languages.",
+            "nullable": true
+          },
+          "StandardDescription": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the standard descriptions in different languages.",
+            "nullable": true
+          },
+          "Count": {
+            "type": "string",
+            "description": "Gets or sets the count.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents an FL property DTO."
+      },
+      "GeneralPlaceholder": {
+        "enum": [
+          "PageNumber",
+          "SerialNumber"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "GeneralReportType": {
+        "enum": [
+          "MaterialList",
+          "DistributorLegend",
+          "CoverSheet",
+          "Summary",
+          "RevisionList",
+          "TerminalChart",
+          "CableChart",
+          "CableList",
+          "ReferenceList",
+          "ReferenceChart",
+          "PlcChart",
+          "WiringChart",
+          "PipeList",
+          "StructureList",
+          "ConnectorChart",
+          "TubeList",
+          "FunctionList",
+          "MeasuringPointsList"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "ImportPartRequest": {
+        "required": [
+          "ManufacturerId",
+          "OriginId",
+          "PartNumber"
+        ],
+        "type": "object",
+        "properties": {
+          "ManufacturerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PartNumber": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "Standard": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "OriginId": {
+            "maximum": 3,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LabelReportType": {
+        "enum": [
+          "ReferenceLabels",
+          "CableLabels",
+          "TerminalLabels",
+          "PlcLabels",
+          "MeasuringPointsLabels",
+          "QrCodeLabels"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "LangString": {
+        "type": "object",
+        "properties": {
+          "Language": {
+            "type": "string",
+            "description": "The language of the string in ISO 639-1 format in lower case.",
+            "nullable": true
+          },
+          "Value": {
+            "type": "string",
+            "description": "The value of the string.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "This class represents a string in a specific language."
+      },
+      "LocalizedText": {
+        "type": "object",
+        "properties": {
+          "Language": {
+            "type": "string",
+            "description": "Gets or sets the language of the localized text.",
+            "nullable": true
+          },
+          "Value": {
+            "type": "string",
+            "description": "Gets or sets the value of the localized text.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a localized text entity."
+      },
+      "Macro": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name of the macro.",
+            "nullable": true
+          },
+          "FilePath": {
+            "type": "string",
+            "description": "The complete full file path of the macro.",
+            "nullable": true
+          },
+          "VariantId": {
+            "type": "integer",
+            "description": "The variant id of the macro.",
+            "format": "int32"
+          },
+          "MacroType": {
+            "$ref": "#/components/schemas/MacroType"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the information of a macro file.",
+        "x-refDescriptions": {
+          "MacroType": "The type of the macro (Page or Path)."
+        }
+      },
+      "MacroPagedResult": {
+        "type": "object",
+        "properties": {
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Macro"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MacroSearchResultDto": {
+        "type": "object",
+        "properties": {
+          "ReferenceName": {
+            "type": "string",
+            "description": "The reference name of the macro.",
+            "nullable": true
+          },
+          "MacroName": {
+            "type": "string",
+            "description": "The name of the macro.",
+            "nullable": true
+          },
+          "MacroType": {
+            "$ref": "#/components/schemas/MacroType"
+          },
+          "FilePath": {
+            "type": "string",
+            "description": "The file path where the macro is located.",
+            "nullable": true
+          },
+          "FileType": {
+            "$ref": "#/components/schemas/FileType"
+          },
+          "Technologies": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Technology"
+            },
+            "description": "The technologies associated with the macro.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a match found during a quick search of macros.",
+        "x-refDescriptions": {
+          "MacroType": "The type of the macro.",
+          "FileType": "The file type of the macro."
+        }
+      },
+      "MacroSearchResultDtoPagedResult": {
+        "type": "object",
+        "properties": {
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MacroSearchResultDto"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MacroType": {
+        "enum": [
+          "Page",
+          "Path"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "Manufacturer": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name of the manufacturer.",
+            "nullable": true
+          },
+          "Number": {
+            "type": "string",
+            "description": "The unique number identifying the manufacturer.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a manufacturer in the WSCAD system."
+      },
+      "MaterialDbPlaceholder": {
+        "enum": [
+          "PartNumber",
+          "ComponentName",
+          "Manufacturer",
+          "Supplier",
+          "Width",
+          "Height",
+          "Length",
+          "Weight",
+          "Power",
+          "Voltage",
+          "Current"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "MaterialListExcelReportRequest": {
+        "type": "object",
+        "properties": {
+          "SortCriteria": {
+            "$ref": "#/components/schemas/ReportSortCriteria"
+          },
+          "OutputGroupping": {
+            "$ref": "#/components/schemas/ReportOutputGroupping"
+          },
+          "GeneralPlaceholders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GeneralPlaceholder"
+            },
+            "nullable": true
+          },
+          "MaterialListPlaceholders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MaterialListPlaceholder"
+            },
+            "nullable": true
+          },
+          "MaterialDbPlaceholders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MaterialDbPlaceholder"
+            },
+            "nullable": true
+          },
+          "SymbolTextPlaceholders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SymbolTextPlaceholder"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MaterialListPlaceholder": {
+        "enum": [
+          "Quantity",
+          "UnitPrice",
+          "LaborCost",
+          "TimeEffort",
+          "Length"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "NormSearchResultDto": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "Name of the norm.",
+            "nullable": true
+          },
+          "Technologies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Technology"
+            },
+            "description": "List of technologies associated with the norm.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NormSearchResultDtoPagedResult": {
+        "type": "object",
+        "properties": {
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NormSearchResultDto"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObjectDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "ID of the object int he format of a GUID",
+            "nullable": true
+          },
+          "Name": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the name of the object.",
+            "nullable": true
+          },
+          "Description": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the description of the object.",
+            "nullable": true
+          },
+          "Properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PropertyDto"
+            },
+            "description": "Gets or sets the list of key-value properties.",
+            "nullable": true
+          },
+          "FlProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FlPropertyDto"
+            },
+            "description": "Gets or sets the list of FL properties.",
+            "nullable": true
+          },
+          "ObjectProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObjectPropertyDto"
+            },
+            "description": "Gets or sets the list of Object properties.",
+            "nullable": true
+          },
+          "BaDataModelId": {
+            "type": "string",
+            "description": "Gets or sets the ID of the aggregate model associated with the aggregate.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Data Transfer Object for Object."
+      },
+      "ObjectPropertyDto": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "description": "Gets or sets the type of the property.",
+            "nullable": true
+          },
+          "Name": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the names in different languages.",
+            "nullable": true
+          },
+          "Description": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the descriptions in different languages.",
+            "nullable": true
+          },
+          "Id": {
+            "type": "string",
+            "description": "Gets or sets the GUID.",
+            "nullable": true
+          },
+          "Number": {
+            "type": "string",
+            "description": "Gets or sets the number.",
+            "nullable": true
+          },
+          "Parameter": {
+            "type": "string",
+            "description": "Gets or sets the parameter.",
+            "nullable": true
+          },
+          "ListOn": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the property is listed."
+          },
+          "Processing": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the property is being processed."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents an Object property DTO."
+      },
+      "OwnKnowledgeResult": {
+        "type": "object",
+        "properties": {
+          "Success": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the query operation was successful."
+          },
+          "RelevantParagraphs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RelevantParagraph"
+            },
+            "description": "Gets or sets a list of relevant paragraphs are relevant to the user's query.",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "description": "Gets or sets an informational message about the query operation.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the response from a query operation against the own knowledge documents."
+      },
+      "PageFile": {
+        "type": "object",
+        "properties": {
+          "FileName": {
+            "type": "string",
+            "description": "Name of the file, including its extension.",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "description": "Name of the file without the extension.",
+            "nullable": true
+          },
+          "Number": {
+            "type": "string",
+            "description": "Number associated with the file, which can be used for identification or ordering.",
+            "nullable": true
+          },
+          "Extension": {
+            "type": "string",
+            "description": "File's extension.",
+            "nullable": true
+          },
+          "FilePath": {
+            "type": "string",
+            "description": "Full path to the file on the filesystem.",
+            "nullable": true
+          },
+          "Content": {
+            "type": "string",
+            "description": "Content of the file as a string.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a page file within a directory, containing various properties related to the file's identity and content."
+      },
+      "PageProperties": {
+        "type": "object",
+        "properties": {
+          "FileName": {
+            "type": "string",
+            "description": "Name of the file associated with the page.",
+            "nullable": true
+          },
+          "Height": {
+            "type": "number",
+            "description": "Height of the page.",
+            "format": "double"
+          },
+          "Width": {
+            "type": "number",
+            "description": "Width of the page.",
+            "format": "double"
+          },
+          "PathInfo": {
+            "type": "string",
+            "description": "Information where the page file is located in the UI.",
+            "nullable": true
+          },
+          "Reference": {
+            "type": "string",
+            "description": "Reference of the page.",
+            "nullable": true
+          },
+          "StructureIdentificationBox": {
+            "type": "string",
+            "description": "Structure identification box of the page.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents properties related to a specific page."
+      },
+      "Part": {
+        "type": "object",
+        "properties": {
+          "ArticleNumber": {
+            "type": "string",
+            "description": "Gets or sets the article number of the part.",
+            "nullable": true
+          },
+          "ArticleName": {
+            "type": "string",
+            "description": "Gets or sets the name of the part.",
+            "nullable": true
+          },
+          "Manufacturer": {
+            "type": "string",
+            "description": "Gets or sets the manufacturer of the part.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the information of a part."
+      },
+      "PartPagedResult": {
+        "type": "object",
+        "properties": {
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Part"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PartQuantityInProject": {
+        "type": "object",
+        "properties": {
+          "ProjectName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ProjectLastModifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "PartCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Class to represent the usage of a part in a project."
+      },
+      "PartSearchResultDto": {
+        "type": "object",
+        "properties": {
+          "Number": {
+            "type": "string",
+            "description": "The number of the part.",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name of the part.",
+            "nullable": true
+          },
+          "Manufacturer": {
+            "type": "string",
+            "description": "The manufacturer of the part.",
+            "nullable": true
+          },
+          "SymbolBa": {
+            "type": "string",
+            "description": "The BA symbol of the part.",
+            "nullable": true
+          },
+          "SymbolCabinet": {
+            "type": "string",
+            "description": "The cabinet symbol of the part.",
+            "nullable": true
+          },
+          "SymbolEe": {
+            "type": "string",
+            "description": "The EE symbol of the part.",
+            "nullable": true
+          },
+          "Symbol1Pol": {
+            "type": "string",
+            "description": "The 1Pol symbol of the part.",
+            "nullable": true
+          },
+          "SymbolFluid": {
+            "type": "string",
+            "description": "The fluid symbol of the part.",
+            "nullable": true
+          },
+          "SymbolInstallation": {
+            "type": "string",
+            "description": "The installation symbol of the part.",
+            "nullable": true
+          },
+          "SymbolPid": {
+            "type": "string",
+            "description": "The PID symbol of the part.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a match found during a quick search of parts."
+      },
+      "PartSearchResultDtoPagedResult": {
+        "type": "object",
+        "properties": {
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PartSearchResultDto"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PartUsageInfo": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "Part name (artikel number).",
+            "nullable": true
+          },
+          "PartQuantityInProject": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PartQuantityInProject"
+            },
+            "description": "Info about how many times the part is used in projects.",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "description": "Message (can be an error message or a warning message).",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Information about a part usage in projects."
+      },
+      "PatternProjectType": {
+        "enum": [
+          "None",
+          "Standard",
+          "KTPInstallation",
+          "KTPLocation",
+          "KTPInstallationLocation",
+          "KTPLocationInstallation",
+          "KTPInstallationInstallation",
+          "KTPLocationLocation",
+          "Free",
+          "Fixed"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "PlacePathMacrosOnPage": {
+        "type": "object",
+        "properties": {
+          "MacroName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Quantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PlacePathMacrosOnPageRequest": {
+        "type": "object",
+        "properties": {
+          "LeftMargin": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "Macros": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlacePathMacrosOnPage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Plant": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "description": "The type of the plant, describing its main function or category.",
+            "nullable": true
+          },
+          "Location": {
+            "type": "string",
+            "description": "The location of the plant.",
+            "nullable": true
+          },
+          "Properties": {
+            "type": "string",
+            "description": "Additional properties of the plant.",
+            "nullable": true
+          },
+          "ProtectionClass": {
+            "type": "string",
+            "description": "The protection class of the plant.",
+            "nullable": true
+          },
+          "PinValues": {
+            "type": "string",
+            "description": "Values related to the plant's pins.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a plant within a project in the WSCAD system."
+      },
+      "Project": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "Gets or sets the unique identifier of the project.",
+            "format": "uuid"
+          },
+          "ProjectName": {
+            "$ref": "#/components/schemas/TString"
+          },
+          "ProjectPath": {
+            "type": "string",
+            "description": "Path to the project.",
+            "nullable": true
+          },
+          "Designation": {
+            "type": "string",
+            "description": "The designation of the project.",
+            "nullable": true
+          },
+          "ProjectNumber": {
+            "type": "string",
+            "description": "The project number.",
+            "nullable": true
+          },
+          "DrawingNumber": {
+            "type": "string",
+            "description": "The drawing number.",
+            "nullable": true
+          },
+          "ProjectDescription": {
+            "type": "string",
+            "description": "The description of the project.",
+            "nullable": true
+          },
+          "CreatedBy": {
+            "type": "string",
+            "description": "The name of the person who created the project.",
+            "nullable": true
+          },
+          "CheckedBy": {
+            "type": "string",
+            "description": "The name of the person who checked the project.",
+            "nullable": true
+          },
+          "Date": {
+            "type": "string",
+            "description": "The date of the project.",
+            "format": "date-time"
+          },
+          "WorkingDirectory": {
+            "type": "string",
+            "description": "The working directory of the project.",
+            "nullable": true
+          },
+          "ExternalConfiguration": {
+            "type": "boolean",
+            "description": "The external configuration of the project."
+          },
+          "Plant": {
+            "$ref": "#/components/schemas/Plant"
+          },
+          "Manufacturer": {
+            "$ref": "#/components/schemas/Manufacturer"
+          },
+          "Customer": {
+            "$ref": "#/components/schemas/Customer"
+          },
+          "StructureTemplateFileFullPath": {
+            "type": "string",
+            "description": "Full path to the structure template file.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "This class represents a project. It is a container for all the data that is needed to describe a project.",
+        "x-refDescriptions": {
+          "ProjectName": "The project name.",
+          "Plant": "The plant details associated with the project.",
+          "Manufacturer": "The manufacturer associated with the project.",
+          "Customer": "The customer associated with the project."
+        }
+      },
+      "ProjectAssignedFrame": {
+        "type": "object",
+        "properties": {
+          "RelativeFramePath": {
+            "type": "string",
+            "description": "Relative path of the frame in page templates",
+            "nullable": true
+          },
+          "FileTypeExtension": {
+            "type": "string",
+            "description": "File type extension linked with frame",
+            "nullable": true
+          },
+          "FileTypeDescription": {
+            "$ref": "#/components/schemas/FileType"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Model of associated page frame with a file type.",
+        "x-refDescriptions": {
+          "FileTypeDescription": "File type description linked with frame"
+        }
+      },
+      "ProjectFrameLayout": {
+        "type": "object",
+        "properties": {
+          "FileName": {
+            "type": "string",
+            "description": "Layout file name",
+            "nullable": true
+          },
+          "FilePath": {
+            "type": "string",
+            "description": "Full file path of the layout",
+            "nullable": true
+          },
+          "Version": {
+            "type": "string",
+            "description": "Version of the layout file",
+            "nullable": true
+          },
+          "AssignedFrames": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProjectAssignedFrame"
+            },
+            "description": "Associated frames with file types",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Project frame layout model. Contains list of associated page templates with file types in the project."
+      },
+      "ProjectPagedResult": {
+        "type": "object",
+        "properties": {
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Project"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProjectTemplateProperties": {
+        "type": "object",
+        "properties": {
+          "FileName": {
+            "type": "string",
+            "description": "File name of the template",
+            "nullable": true
+          },
+          "FilePath": {
+            "type": "string",
+            "description": "Full file path of the template",
+            "nullable": true
+          },
+          "FixedStructure": {
+            "type": "boolean",
+            "description": "Determines if the structure is fixed"
+          },
+          "ShortStructure": {
+            "type": "boolean",
+            "description": "Determines if the structure is short"
+          },
+          "SubPageDivider": {
+            "type": "string",
+            "description": "Sub page divider character",
+            "nullable": true
+          },
+          "SubPageSuffix": {
+            "$ref": "#/components/schemas/SubPageSuffixType"
+          },
+          "PatternProjectType": {
+            "$ref": "#/components/schemas/PatternProjectType"
+          },
+          "InfoText": {
+            "type": "string",
+            "description": "Information text of the pattern",
+            "nullable": true
+          },
+          "NameText": {
+            "type": "string",
+            "description": "Name text of the pattern",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Project template properties model",
+        "x-refDescriptions": {
+          "SubPageSuffix": "Sub page suffix type",
+          "PatternProjectType": "Pattern project type"
+        }
+      },
+      "ProjectTreeStructure": {
+        "type": "object",
+        "properties": {
+          "Directories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Directory"
+            },
+            "description": "Collection of directories that make up the project structure.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the structure of a project, consisting of a collection of directories."
+      },
+      "ProjectValidationFilter": {
+        "enum": [
+          "All",
+          "CurrentDocument",
+          "ElectricalEngineering",
+          "CabinetEngineering",
+          "ElectricalInstallation",
+          "BuildingAutomation",
+          "FluidEngineering",
+          "ElectricalEngineering1Pol",
+          "PipingAndInstrumentationDiagram"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "ProjectValidationType": {
+        "enum": [
+          "CoilsNotPlaced",
+          "CoilsWithoutContacts",
+          "CoilsWithUnusedContacts",
+          "PlcsNotPlaced",
+          "PlcsWithoutChannels",
+          "PlcsWithUnusedChannels",
+          "OpenConnections",
+          "CabinetRoutingConnections",
+          "CollisionsOfPotentials",
+          "ComponentsWithoutBMK",
+          "SymbolsWithoutPartNumber",
+          "UnassociatedConnectionAttributes",
+          "DocumentFolderTemplateExistence",
+          "PartDbAvailability",
+          "LexiconAddressAndColorCodeDbAvailability",
+          "DefaultComponentSymbolsAvailability",
+          "DefaultReportComponentSymbolsAvailability",
+          "CablesAndPipesWithoutArticleNumber",
+          "ElectricalInstallationDisconnectedComponents",
+          "ElectricalInstallationIntegrity",
+          "OverloadedCablePipes"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "PropertyDto": {
+        "type": "object",
+        "properties": {
+          "Key": {
+            "type": "string",
+            "description": "Gets or sets the key of the property.",
+            "nullable": true
+          },
+          "Value": {
+            "type": "string",
+            "description": "Gets or sets the value of the property.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a data transfer object for the Property entity."
+      },
+      "PropertyGroupDto": {
+        "type": "object",
+        "properties": {
+          "Key": {
+            "type": "string",
+            "description": "Gets or sets the key of the property group.",
+            "nullable": true
+          },
+          "Name": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the localized names of the property group.",
+            "nullable": true
+          },
+          "Description": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the localized descriptions of the property group.",
+            "nullable": true
+          },
+          "Parent": {
+            "type": "string",
+            "description": "Gets or sets the parent of the property group.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a data transfer object for the PropertyGroup entity."
+      },
+      "RelevantParagraph": {
+        "type": "object",
+        "properties": {
+          "Text": {
+            "type": "string",
+            "description": "Gets or sets the text content of the matched paragraph.",
+            "nullable": true
+          },
+          "Similarity": {
+            "type": "number",
+            "description": "Gets or sets the similarity score.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a single relevant paragraph that matches a user's query."
+      },
+      "ReportOutputGroupping": {
+        "enum": [
+          "Individual",
+          "Combined",
+          "CombinedWithReferenceDesignation",
+          "CombinedWithAdditionalParts",
+          "CombinedWithAdditionalPartsAndReferenceDesignation"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "ReportSortCriteria": {
+        "enum": [
+          "PartNumber",
+          "SymbolName",
+          "ReferenceDesignation",
+          "Manufacturer"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "SolutionFolder": {
+        "enum": [
+          "DocumentFolder",
+          "GroupFolder",
+          "StructureIdentifierFolder",
+          "TechnologyFolder",
+          "Unkown"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "SolutionItem": {
+        "enum": [
+          "Wscad",
+          "WscadStartPage",
+          "Solution",
+          "ProjectListFile",
+          "ProjectGroup",
+          "ProjectSorter",
+          "Project",
+          "ProjectFile",
+          "Subprojects",
+          "SectionForElectricalEngineering",
+          "SectionForCabinet",
+          "SectionForInstallation",
+          "SectionForBuildingAutomation",
+          "SectionForFluid",
+          "SectionWithStructureIdentifier",
+          "File",
+          "Symbol",
+          "Modification",
+          "CoverSheet",
+          "RevisionList",
+          "Summary",
+          "Schematics",
+          "ControlCabinet",
+          "Cabinet",
+          "Fluid",
+          "TerminalChart",
+          "TerminalPinChart",
+          "ConnectorChart",
+          "CableList",
+          "CableChart",
+          "WiringChart",
+          "MaterialList",
+          "ReferenceList",
+          "PlcChart",
+          "Graphics",
+          "InstallationPlan",
+          "InstallationGraphic2D",
+          "AutomationScheme",
+          "SingleLineSchematic",
+          "AdditionalSection",
+          "AdditionalSection1",
+          "AdditionalSection2",
+          "AdditionalSection3",
+          "AdditionalSection4",
+          "AdditionalSection5",
+          "Misc",
+          "CoverSheetFile",
+          "RevisionListFile",
+          "SummaryFile",
+          "SchematicsFile",
+          "CabinetFile",
+          "FluidFile",
+          "TerminalChartFile",
+          "ConnectorChartFile",
+          "CableListFile",
+          "CableChartFile",
+          "WiringChartFile",
+          "MaterialListFile",
+          "ReferenceListFile",
+          "GraphicFile",
+          "FrameFile",
+          "DigitizerTemplateFile",
+          "MacroFile",
+          "InstallationPlanFile",
+          "AutomationSchemeFile",
+          "MiscFile",
+          "TerminalPinChartFile",
+          "PlcChartFile",
+          "SymbolLibrary",
+          "SingleLineSchematicFile",
+          "InstallationGraphicFile",
+          "TubeList",
+          "TubeListFile",
+          "FunctionList",
+          "FunctionListFile",
+          "ReferenceChart",
+          "ReferenceChartFile",
+          "SectionForSinglePhaseSchematic",
+          "DistributorLegend",
+          "DistributorLegendFile",
+          "PIdDiagramSection",
+          "PIdDiagramFile",
+          "PID",
+          "MeasurePointList",
+          "MeasuringPointListFile",
+          "PipeListFile",
+          "PipeList",
+          "StructureListFile",
+          "StructureList",
+          "Unkown"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "StandardDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "Gets or sets the ID of the standard.",
+            "nullable": true
+          },
+          "Name": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the localized names of the standard.",
+            "nullable": true
+          },
+          "Description": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocalizedText"
+            },
+            "description": "Gets or sets the localized descriptions of the standard.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a data transfer object for the Standard entity."
+      },
+      "StringPagedResult": {
+        "type": "object",
+        "properties": {
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SubPageSuffixType": {
+        "enum": [
+          "None",
+          "Alphabetic",
+          "Numeric",
+          "Numeric2Digits",
+          "Numeric3Digits"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "Symbol": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name of the symbol.",
+            "nullable": true
+          },
+          "Id": {
+            "type": "string",
+            "description": "Identifier of the symbol.",
+            "format": "uuid"
+          },
+          "LibraryFilePath": {
+            "type": "string",
+            "description": "The file path of the library where the symbol is stored.",
+            "nullable": true
+          },
+          "VariantId": {
+            "type": "integer",
+            "description": "The variant ID of the symbol.",
+            "format": "int32",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a symbol from a library that can be placed in a drawing."
+      },
+      "SymbolPagedResult": {
+        "type": "object",
+        "properties": {
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Symbol"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SymbolSearchResultDto": {
+        "type": "object",
+        "properties": {
+          "SymbolName": {
+            "type": "string",
+            "description": "The name of the symbol.",
+            "nullable": true
+          },
+          "FilePath": {
+            "type": "string",
+            "description": "The file path where the symbol is located.",
+            "nullable": true
+          },
+          "Technology": {
+            "$ref": "#/components/schemas/Technology"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a match found during a quick search of symbols.",
+        "x-refDescriptions": {
+          "Technology": "The technology associated with the symbol."
+        }
+      },
+      "SymbolSearchResultDtoPagedResult": {
+        "type": "object",
+        "properties": {
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SymbolSearchResultDto"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SymbolTextPlaceholder": {
+        "enum": [
+          "SymbolName",
+          "ReferenceDesignation",
+          "ReferenceDesignationWithStructure",
+          "PartNumber",
+          "Manufacturer",
+          "FunctionText"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "TString": {
+        "type": "object",
+        "properties": {
+          "Values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LangString"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "This class represents a string that can be translated into different languages."
+      },
+      "TaskDetails": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "Id of the task.",
+            "format": "uuid"
+          },
+          "State": {
+            "$ref": "#/components/schemas/TaskState"
+          },
+          "Result": {
+            "description": "Task result, if any.",
+            "nullable": true
+          },
+          "StartTime": {
+            "type": "string",
+            "description": "Time when the task started.",
+            "format": "date-time"
+          },
+          "EndTime": {
+            "type": "string",
+            "description": "Time when the task ended.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ErrorMessage": {
+            "type": "string",
+            "description": "Error message, if any.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Details and status of a task.",
+        "x-refDescriptions": {
+          "State": "Task state."
+        }
+      },
+      "TaskState": {
+        "enum": [
+          "Running",
+          "Completed",
+          "Failed"
+        ],
+        "type": "string",
+        "format": ""
+      },
+      "Technology": {
+        "enum": [
+          "All",
+          "ElectricalEngineering",
+          "CabinetEngineering",
+          "ElectricalInstallation",
+          "BuildingAutomation",
+          "FluidEngineering",
+          "ElectricalEngineering1Pol",
+          "PipingAndInstrumentationDiagram"
+        ],
+        "type": "string",
+        "format": ""
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Input your Bearer token in this format - Bearer {your_token_here}",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}
