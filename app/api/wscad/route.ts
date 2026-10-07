@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { normalizeBearerToken } from "../../token";
 
 const allowedHosts = new Set(["localhost", "127.0.0.1", "::1", "[::1]"]);
 const allowedMethods = new Set(["GET", "POST", "PUT", "PATCH", "DELETE"]);
@@ -27,11 +28,13 @@ export async function POST(request: NextRequest) {
 
   const target = new URL(payload.path, `${base.protocol}//${base.host}`);
   const headers: Record<string, string> = { Accept: "application/json" };
-  if (payload.token?.trim()) headers.Authorization = `Bearer ${payload.token.trim()}`;
+  const token = normalizeBearerToken(payload.token);
+  if (!token) return NextResponse.json({ error: "Für Live-Aufrufe ist ein ELECTRIX API-Zugriffstoken erforderlich." }, { status: 401 });
+  headers.Authorization = `Bearer ${token}`;
   if (payload.body !== undefined && method !== "GET") headers["Content-Type"] = "application/json";
 
   try {
-    const response = await fetch(target, { method, headers, body: payload.body !== undefined && method !== "GET" ? JSON.stringify(payload.body) : undefined, signal: AbortSignal.timeout(30_000), cache: "no-store" });
+    const response = await fetch(target, { method, headers, body: payload.body !== undefined && method !== "GET" ? JSON.stringify(payload.body) : undefined, signal: AbortSignal.timeout(45_000), cache: "no-store" });
     const text = await response.text();
     let data: unknown = text;
     try { data = text ? JSON.parse(text) : null; } catch { /* keep plain text */ }
