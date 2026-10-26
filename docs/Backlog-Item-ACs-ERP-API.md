@@ -69,8 +69,8 @@ This story covers only API functions for searching, reading, validating, creatin
 | `POST` | `/api/v1/parts/batch/validate` | Validate multiple articles |
 | `POST` | `/api/v1/parts/batch/upsert` | Process multiple articles |
 | `GET` | `/api/v1/parts/batch/{batchId}/results` | Retrieve the results of a batch operation |
-| `GET` | `/api/v1/business-partners` | Search for manufacturers and suppliers |
-| `POST` | `/api/v1/business-partners` | Create a manufacturer or supplier if this is part of the agreed functional behaviour |
+| `GET` | `/api/v1/manufacturers` | Search for manufacturers |
+| `POST` | `/api/v1/manufacturers` | Create a manufacturer if this is part of the agreed functional behaviour |
 
 ## Acceptance Criteria
 
@@ -89,7 +89,7 @@ This story covers only API functions for searching, reading, validating, creatin
 
 ### AC03 – The public article model is functional and stable
 
-- The public API model uses stable and understandable sections such as `partNumber`, `manufacturer`, `supplier`, `classification`, `descriptions`, `commercial`, `technical`, `dimensions`, `representations`, `attributes`, `userFields`, and `additionalParts`.
+- The public API model uses stable and understandable sections such as `partNumber`, `manufacturer`, `classification`, `descriptions`, `commercial`, `technical`, `dimensions`, `representations`, `attributes`, `userFields`, and `additionalParts`.
 - Multilingual texts can be assigned unambiguously to their languages.
 - Physical database fields and internal keys such as `artManufacturer` and `adrAutoValue` are not exposed as writable public properties.
 - Internal table names are not part of the public contract.
@@ -144,9 +144,9 @@ This story covers only API functions for searching, reading, validating, creatin
 - The result clearly identifies `Created`, `Updated`, or `Unchanged`.
 - Multiple matches return `409 Conflict` without modifying any data.
 
-### AC11 – Manufacturers and suppliers are resolved correctly internally
+### AC11 – Manufacturers are resolved correctly internally
 
-- ELECTRIX resolves manufacturers and suppliers using a documented stable identifier.
+- ELECTRIX resolves manufacturers using a documented stable identifier.
 - ELECTRIX maintains all required internal keys and relationships itself.
 - A new business partner is created only in accordance with the documented functional behaviour.
 - Duplicate business partners are prevented using the defined business key.
@@ -159,7 +159,7 @@ This story covers only API functions for searching, reading, validating, creatin
 
   - general article data,
   - category and subcategory,
-  - manufacturers and suppliers,
+  - manufacturers,
   - multilingual article texts,
   - commercial data such as price and weight,
   - technical properties,
@@ -240,7 +240,7 @@ This story covers only API functions for searching, reading, validating, creatin
 - **Must be resolved before implementation:** the exact public article key and business key—`partNumber` alone or a combination such as manufacturer plus article number. According to the legacy reference, `artAutoValue` is exclusively internal and is not assumed to be a public `partId`.
 - Canonical representation and comparison rules for article numbers, especially case, whitespace, and leading zeros.
 - Complete list of article sections and fields writable in the first release.
-- Stable identification of manufacturers and suppliers.
+- Stable identification of manufacturers.
 - PATCH semantics for `null`, empty strings, empty arrays, and explicitly removing a relationship.
 - Version mechanism for optimistic concurrency handling.
 - Batch transaction strategy: per article or for the complete batch.
