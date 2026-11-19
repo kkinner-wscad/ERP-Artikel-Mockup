@@ -29,8 +29,7 @@ export async function POST(request: NextRequest) {
   const target = new URL(payload.path, `${base.protocol}//${base.host}`);
   const headers: Record<string, string> = { Accept: "application/json" };
   const token = normalizeBearerToken(payload.token);
-  if (!token) return NextResponse.json({ error: "Für Live-Aufrufe ist ein ELECTRIX API-Zugriffstoken erforderlich." }, { status: 401 });
-  headers.Authorization = `Bearer ${token}`;
+  if (token) headers.Authorization = `Bearer ${token}`;
   if (payload.body !== undefined && method !== "GET") headers["Content-Type"] = "application/json";
 
   try {

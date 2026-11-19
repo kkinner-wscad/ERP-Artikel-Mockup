@@ -18,7 +18,7 @@ Eigenständige, lokal laufende Oberfläche für die direkte Integration eines f�
 
 ## Sicherheit
 
-Die lokale Proxy-Route akzeptiert ausschließlich `localhost`, `127.0.0.1` oder `::1` und nur Pfade unter `/api/v1/`. Der Bearer-Token wird nicht in Dateien gespeichert.
+Die lokale Proxy-Route akzeptiert ausschließlich `localhost`, `127.0.0.1` oder `::1` und nur Pfade unter `/api/v1/`. Mit aktiviertem ELECTRIX INI-Schalter ist der Zugriff ohne Token möglich. Falls ein Bearer-Token eingetragen wird, wird er nicht in Dateien gespeichert.
 
 ## Verträge und Quellen
 
